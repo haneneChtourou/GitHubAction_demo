@@ -6,6 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-    with: node-version '20'
-  run: npm i -g check-bats-version
-  
+    with: 
+      node-version: '20'
+    - run: npm i -g check-bats-version
+    - run: bats -v  
