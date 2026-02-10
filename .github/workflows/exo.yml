@@ -18,7 +18,7 @@ jobs:
 
   pr-job:
     runs-on: ubuntu-latest
-    if: github.event_name == 'pull'
+    if: github.event_name == 'pull_request'
     steps:
       - name: Pull request detected
         run: echo "$PR_MESSAGE"
