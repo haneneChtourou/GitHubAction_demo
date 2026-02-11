@@ -1,13 +1,13 @@
-name: Merge PR
+# name: Merge PR
 
-on:
-  pull_request:
-    types: [closed]  # se déclenche à la fermeture d'une PR
+# on:
+#   pull_request:
+#     types: [closed]  # se déclenche à la fermeture d'une PR
 
-jobs:
-  check-merge:
-    runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true  # condition : seulement si la PR a été mergée
-    steps:
-      - name: PR merged
-        run: echo "La PR a été mergée !"
+# jobs:
+#   check-merge:
+#     runs-on: ubuntu-latest
+#     if: github.event.pull_request.merged == true  # condition : seulement si la PR a été mergée
+#     steps:
+#       - name: PR merged
+#         run: echo "La PR a été mergée !"
