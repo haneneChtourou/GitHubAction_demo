@@ -1,27 +1,27 @@
-name: Detect GitHub Event
+# name: Detect GitHub Event
 
-on:
-  push:
-  pull_request:
+# on:
+#   push:
+#   pull_request:
 
-env:
-  PUSH_MESSAGE: "C'est un push !"
-  PR_MESSAGE: "C'est une pull request !"
+# env:
+#   PUSH_MESSAGE: "C'est un push !"
+#   PR_MESSAGE: "C'est une pull request !"
 
-jobs:
-  push-job:
-    runs-on: ubuntu-latest
-    if: github.event_name == 'push'
-    steps:
-      - name: Push detected
-        run: echo "$PUSH_MESSAGE"
+# jobs:
+#   push-job:
+#     runs-on: ubuntu-latest
+#     if: github.event_name == 'push'
+#     steps:
+#       - name: Push detected
+#         run: echo "$PUSH_MESSAGE"
 
-  pr-job:
-    runs-on: ubuntu-latest
-    if: ${{ github.event_name == 'pull_request' }}
-    steps:
-      - name: Run PR CI
-        run: echo "Running PR only CI"
-    steps:
-      - name: Pull request detected
-        run: echo "$PR_MESSAGE"
+#   pr-job:
+#     runs-on: ubuntu-latest
+#     if: ${{ github.event_name == 'pull_request' }}
+#     steps:
+#       - name: Run PR CI
+#         run: echo "Running PR only CI"
+#     steps:
+#       - name: Pull request detected
+#         run: echo "$PR_MESSAGE"

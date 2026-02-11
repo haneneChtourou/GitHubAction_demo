@@ -1,20 +1,20 @@
-name: Hello François
+# #name: Hello François
 
-on: workflow_dispatch
-env: 
-  NAME: Hanen
+# on: workflow_dispatch
+# env: 
+#   NAME: Hanen
 
-jobs:
-  say_hello:
-    runs-on: ubuntu-latest
-    steps:
-      - name: "DIT bonjour"
+# jobs:
+#   say_hello:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: "DIT bonjour"
 
-        if: ${{ env.NAME != 'Hanen'}}
-        run: echo "Salut mais qui es tu> tu n'es pas $NAME ?! OO!"
+#         if: ${{ env.NAME != 'Hanen'}}
+#         run: echo "Salut mais qui es tu> tu n'es pas $NAME ?! OO!"
 
-      - name: "Hello hanen"
+#       - name: "Hello hanen"
 
 
-        if: ${{ env.NAME == 'François'}}
-        run: echo "Salut $NAME ? Force et honneur!"
+#         if: ${{ env.NAME == 'François'}}
+#         run: echo "Salut $NAME ? Force et honneur!"
