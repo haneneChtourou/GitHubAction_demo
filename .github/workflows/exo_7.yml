@@ -5,8 +5,8 @@ on:
     branches: [main, develop]
   pull_request:
     branches: [main, develop]
-  schedule:
-    - cron: '0 0 * * 1' # Tous les lundis à minuit
+  #schedule:
+    #- cron: '0 0 * * 1' # Tous les lundis à minuit
 
 jobs:
   build:

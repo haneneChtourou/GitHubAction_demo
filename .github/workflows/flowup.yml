@@ -1,14 +1,14 @@
-# name: After Merge PR
+name: After Merge PR
 
-# on:
-#   workflow_run:
-#     workflows: ["Merge PR"]  # nom exact du workflow précédent
-#     types:
-#       - completed  # se déclenche quand le workflow est terminé
+on:
+  workflow_run:
+    workflows: ["Merge PR"]  # nom exact du workflow précédent
+    types:
+      - completed  # se déclenche quand le workflow est terminé
 
-# jobs:
-#   message:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Affichage message
-#         run: echo "Le workflow Merge PR est terminé !"
+jobs:
+  message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Affichage message
+        run: echo "Le workflow Merge PR est terminé !"
